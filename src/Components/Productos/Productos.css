@@ -1,0 +1,91 @@
+.subtitulo{
+  margin-bottom: 2rem;
+  color: white;
+}
+
+
+@media (min-width:768px) {
+    .grid{
+        display: grid;
+        grid-template-columns: 50% 50% ;
+        gap: 1rem;
+    }
+}
+
+@media (max-width:768px) {
+    .grid{
+        display: grid;
+        grid-template-columns:1fr;
+        gap: 2rem;
+    }
+}
+
+
+@media (min-width:1028px) {
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+
+/*
+<div class="card" width = "18rem">
+<img src="../img/red-ale.jpg" class="card-img-top" alt="..."/>
+<div class="card-body">
+  <h5 class="card-title">Card title</h5>
+  <p class="card-text">Some title and make up the bulk of the card's content.</p>
+  <a href="#" class="btn btn-secondary">Comprar</a>
+</div>
+</div>
+
+<div class="card" width = "18rem">
+<img src="../img/ipa.jpg" class="card-img-top" alt="..."/>
+<div class="card-body">
+  <h5 class="card-title">Card title</h5>
+  <p class="card-text">Some title and make up the bulk of the card's content.</p>
+  <a href="#" class="btn btn-secondary">Comprar</a>
+</div>
+</div>
+
+<div class="card" width = "18rem">
+<img src="../img/altbier.jpg" class="card-img-top" alt="..."/>
+<div class="card-body">
+  <h5 class="card-title">Card title</h5>
+  <p class="card-text">Some title and make up the bulk of the card's content.</p>
+  <a href="#" class="btn btn-secondary">Comprar</a>
+</div>
+</div>
+
+<div class="card" width = "18rem">
+<img src="../img/ipa.jpg" class="card-img-top" alt="..."/>
+<div class="card-body">
+  <h5 class="card-title">Card title</h5>
+  <p class="card-text">Some title and make up the bulk of the card's content.</p>
+  <a href="#" class="btn btn-secondary">Comprar</a>
+</div>
+</div>
+
+<div class="card" width = "18rem">
+<img src="../img/ipa.jpg" class="card-img-top" alt="..."/>
+<div class="card-body">
+  <h5 class="card-title">Card title</h5>
+  <p class="card-text">Some title and make up the bulk of the card's content.</p>
+  <a href="#" class="btn btn-secondary">Comprar</a>
+</div>
+</div>
+
+<div class="card" width = "18rem">
+<img src="../img/ipa.jpg" class="card-img-top" alt="..."/>
+<div class="card-body">
+  <h5 class="card-title">Card title</h5>
+  <p class="card-text">Some title and make up the bulk of the card's content.</p>
+  <a href="#" class="btn btn-secondary">Comprar</a>
+</div>
+</div>
+*/
