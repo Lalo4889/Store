@@ -1,33 +1,32 @@
 import './Components/ItemListContainer/Item.css';
 import './Components/NavBar/Navbar.css';
 import './Components/Productos/Productos.css';
+import './Components/ItemDetail/ItemDetail.css';
 import './App.css';
+import { BrowserRouter, Routes,Route } from 'react-router-dom';
+
 import NavBar from './Components/NavBar/NavBar';
 import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
-import ComponentePadre from './Components/Productos/ComponentePadre';
-import ComponenteHijo from './Components/Productos/ComponenteHijo';
+import Error from './Components/NavBar/Error';
+import ItemDetailContainer from './Components/ItemDetailContainer/ItemDetailContainer';
+import Nosotros from './Components/NavBar/Nosotros';
+
 
 
 
 function App() {
   return (
     <div className="App">
+    <BrowserRouter>
       <NavBar/>
-      <ItemListContainer imagen="../img/localpor.png" titulo="BAR AND GRILL" descripcion="La mejor cerveza artesanal!!" />
-      <ComponentePadre>
-        <ComponenteHijo imagen = "../img/apa.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanal"/>    
-        <ComponenteHijo imagen = "../img/ipa.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanal"/>    
-        <ComponenteHijo imagen = "../img/altbier.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanal"/>    
-        <ComponenteHijo imagen = "../img/porter.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanal"/>    
-        <ComponenteHijo imagen = "../img/pilsen-ale.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanal"/>    
-        <ComponenteHijo imagen = "../img/red-ale.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanal"/>    
-        <ComponenteHijo imagen = "../img/strong-golden-ale.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanal"/>    
-        <ComponenteHijo imagen = "../img/brown-ale.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanal"/>    
-        <ComponenteHijo imagen = "../img/cream-ale.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanal"/>    
-        <ComponenteHijo imagen = "../img/pale-ale.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanal"/>    
-        <ComponenteHijo imagen = "../img/pilsen-lager.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanal"/>    
-        <ComponenteHijo imagen = "../img/stout.jpg" titulo ="CERVEZA" descripcion ="La mejore cerveza artesanl"/>
-      </ComponentePadre>
+      <Routes>
+        <Route path='/' element={<ItemListContainer/>}/>
+        <Route path='/category/:id' element={<ItemListContainer/>}/>
+        <Route path='/nosotros' element={<Nosotros/>}/>
+        <Route path='/item/:id' element={<ItemDetailContainer/>}/>
+        <Route path='*' element={<Error/>}/>
+      </Routes>
+    </BrowserRouter>
     </div>
   );
 }

@@ -1,25 +1,32 @@
+.fondo{
+  background-color: black;
+}
 
+h3{
+  font-family: 'Anton', sans-serif;
+  font-size: 4rem;
+  }
 
-.img_portada{
-    opacity: .8;
-    margin-bottom: 5rem;
+  /* home*/
+
+  .portada{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    padding: 2rem;
   }
-  .contenedor-imagen {
-    position: relative;
-    display: inline-block;
+
+  .iconos{
+   display: grid;
+   grid-template-columns: 25% 25% 25% 25%;
+   margin: 4rem auto;
   }
-  
-  .texto-superpuesto {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.4);
-    padding: 10px;
-    text-align: center;
+
+  .icono p{
+    padding-top: 1rem;
   }
-  
-  h3{
-    font-family: 'Anton', sans-serif;
-    font-size: 4rem;
+  .parrafo{
+    padding-top: 2rem;
+    font-size: 1rem;
+    font-weight: 500;
   }

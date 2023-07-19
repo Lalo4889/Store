@@ -1,0 +1,30 @@
+.presentacion{
+    max-width: 70%;
+    margin: 0 auto;
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    background-color: rgb(195, 186, 174);
+    padding: 2rem;
+    border-radius: 5px;
+    gap: 3rem;
+}
+
+.datos_producto{
+    
+}
+
+.contador{
+    border-color: white;
+    border-width: 3px;
+}
+
+.boton{
+    border-color: white;
+    border-width: 3px;
+}
+
+.boton_input{
+    margin-top: 1rem;
+    
+}
