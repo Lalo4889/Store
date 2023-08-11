@@ -30,3 +30,44 @@ h3{
     font-size: 1rem;
     font-weight: 500;
   }
+
+  .subtitulo{
+    padding-top: 3rem;
+    color: white;
+  }
+  
+
+  /* media queryes*/
+  
+  @media (min-width:768px) {
+      .grid{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr ;
+          row-gap: 2rem;
+          padding: 2rem;
+      }
+  }
+  
+  @media (max-width:768px) {
+      .grid{
+          display: grid;
+          grid-template-columns:1fr;
+          gap: 2rem;
+          padding: 2rem;
+      }
+  }
+  
+  
+  @media (min-width:1028px) {
+      .grid{
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+          gap: 1rem;
+          padding: 5rem;
+      }
+  }
+  
+  
+  
+  
+  

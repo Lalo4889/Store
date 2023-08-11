@@ -9,46 +9,39 @@ const Nosotros =()=>{
             </div>
             <div>
                 <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec cursus risus dignissim, hendrerit 
-                augue sed, viverra tortor. Cras a condimentum est, vel tristique mi. In hac habitasse platea dictumst.
-                 Proin tristique tortor sodales, dapibus metus at, consectetur ante. Nulla et massa dolor. Ut purus 
-                 felis, fringilla interdum diam porta, porttitor porttitor diam. Maecenas at neque sed diam tincidunt
-                 lum tristique diam enim, vel vulputate purus posuere ac. Vestibulum eu diam rutrum orci gravida aliquam.
-
-                Mauris in tortor non mauris dapibus scelerisque. Sed et tincidunt purus. Curabitur risus urna, sodales in fringilla vel, 
-                hendrerit vel lorem. Aenean vulputate erat nec odio ullamcorper vestibulum. Morbi eget imperdiet nisl. Pellentesque non felis 
-                fermentum, pellentesque sem sit amet, fermentum felis. Mauris diam nulla, bibendum non mi sed, pretium commodo purus.
-               e cubilia curae; Suspendisse dictum blandit ipsum quis finibus. Aenean hendrerit condimentum. 
-               
+                Somos una joven y apasionada fábrica de cervezas artesanales, comprometida con la excelencia y la innovación. Nuestro equipo está lleno de entusiasmo y dedicación para crear cervezas únicas y sorprendentes. Nos motiva la búsqueda constante de sabores originales y la experimentación con ingredientes de calidad.
+                En nuestra fábrica, cada lote de cerveza es elaborado con esmero y cuidado, siguiendo procesos artesanales que resaltan la personalidad de cada variedad. Nos enorgullece ofrecer una experiencia cervecera única, donde cada sorbo es una invitación al deleite.
+                Valoramos el feedback de nuestros clientes y nos esforzamos por mejorar continuamente. Estamos emocionados por crecer y compartir nuestra pasión por la cerveza artesanal con cada amante de esta bebida.
+                ¡Únete a nosotros en este emocionante viaje cervecero y descubre la magia de nuestras cervezas artesanales! ¡Salud!
                 </p>
             </div>
-            </div>  
-            <div className='iconos'>
+        </div>  
+        <div className='iconos'>
+            <div>
+                <img className='icono' src='../img/tienda.png' alt='imagen de icono'/>
                 <div>
-                    <img className='icono' src='../img/tienda.png' alt='imagen de icono'/>
-                    <div>
-                        <p className='parrafo'>Acércate a nuestro local y conoce nuestra fábrica.</p>
-                    </div>
-                </div>
-                <div>
-                    <img className='icono' src='../img/icono_disfruta.png' alt='imagen de icono'/>
-                    <div>
-                        <p className='parrafo'>Compártela con tus amigos.</p>
-                    </div>
-                </div>
-                <div>
-                    <img className='icono' src='../img/icono_eventos.png' alt='imagen de icono'/>
-                    <div>
-                        <p className='parrafo'>Sigue nuestras redes y entérate de los mejores eventos.</p>
-                    </div>
-                </div>
-                <div>
-                    <img className='icono' src='../img/icono_promociones.png' alt='imagen de icono'/>
-                    <div>
-                        <p className='parrafo'>Cada semana lanzamos una nueva promoción, no te la pierdas.</p>
-                    </div>
+                    <p className='parrafo'>Acércate a nuestro local y conoce nuestra fábrica.</p>
                 </div>
             </div>
+            <div>
+                <img className='icono' src='../img/icono_disfruta.png' alt='imagen de icono'/>
+                <div>
+                    <p className='parrafo'>Compártela con tus amigos.</p>
+                </div>
+            </div>
+            <div>
+                <img className='icono' src='../img/icono_eventos.png' alt='imagen de icono'/>
+                <div>
+                    <p className='parrafo'>Sigue nuestras redes y entérate de los mejores eventos.</p>
+                </div>
+            </div>
+            <div>
+                <img className='icono' src='../img/icono_promociones.png' alt='imagen de icono'/>
+                <div>
+                    <p className='parrafo'>Cada semana lanzamos una nueva promoción, no te la pierdas.</p>
+                </div>
+            </div>
+        </div>
         </>
     )
 }

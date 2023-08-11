@@ -1,7 +1,7 @@
 .presentacion{
-    max-width: 70%;
+    max-width: 65%;
     margin: 0 auto;
-    margin-top: 4rem;
+    margin: 4rem auto;
     display: grid;
     grid-template-columns: 2fr 1fr;
     background-color: rgb(195, 186, 174);
@@ -10,9 +10,6 @@
     gap: 3rem;
 }
 
-.datos_producto{
-    
-}
 
 .contador{
     border-color: white;

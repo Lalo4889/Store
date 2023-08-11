@@ -1,32 +1,35 @@
-import {useState, useEffect} from 'react';
-import Cervezas from '../../json/cervezas.json';
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
+import Spinner from '../Spinner/Spinner';
 
-
-
-const  ItemListContainer = () =>{
-    const [Item, setItem] = useState([])
-    const {id} = useParams();
+const ItemListContainer = () => {
     
-useEffect(()=>{
-    const cerveza = new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(id ? Cervezas.filter(item=>item.category === id) : Cervezas)
-            /*si el id existe en el array lo va a filtrar segun la categoria y en caso de que no imprima todo el array del archvo osea todas las categorias */
-        },1000);
-    });
-    cerveza.then((data)=>{
-        setItem(data)
-    })
-},[id])
+  const { id } = useParams()
+  const [items, setItems] = useState([])
+  const [load, setLoad] = useState(true)
+
+  const getData = async (categoria) => {
+    setLoad(true)
+    const querydb = getFirestore();
+    const queryCollection = categoria ? query(collection(querydb, 'products'), where("categoryId", "==", categoria)) : collection(querydb, 'products');
+    const resultado = await getDocs(queryCollection)
+    const datos = resultado.docs.map(p => ({ id: p.id, ...p.data() }))
+    setItems(datos)
+    setLoad(false)
+  }
+
+  useEffect(() => {
+    getData(id)
+  }, [id])
 
 
-
-    return(
-       <ItemList item={Item}/>
-    )
-}
-    
+  return (
+    <>
+      {load ? <Spinner/> : < ItemList item={items} />}
+    </>
+  );
+};
 
 export default ItemListContainer;

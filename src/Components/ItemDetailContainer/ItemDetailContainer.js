@@ -1,29 +1,35 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import cervezas from '../../json/cervezas.json'
 import ItemDetail from "../ItemDetail/ItemDetail";
-
+import {getFirestore, doc, getDoc} from 'firebase/firestore';
+import Spinner from "../Spinner/Spinner";
 
 
 const ItemDetailContainer=()=>{
     const [item, setItem] = useState([])
     const {id} = useParams();
+    const [load, setLoad] = useState(true)
     
-useEffect(()=>{
-    const cerveza = new Promise((resolve) => {
-        setTimeout(() => {
-            resolve(cervezas.find(item=> item.id === parseInt(id)))
-            /*si el id existe en el array lo va a filtrar segun la categoria y en caso de que no imprima todo el array del archvo osea todas las categorias */
-        },1000);
-    });
-    cerveza.then((data)=>{
-        setItem(data)
-    })
-},[id])
+    useEffect(() => {
+        setLoad(true);
+    
+        const querydb = getFirestore();
+        const queryDoc = doc(querydb, 'products', id);
+    
+        getDoc(queryDoc)
+        .then(res => {
+            setItem({ id: res.id, ...res.data() });
+            setLoad(false); 
+        })
+        .catch(error => {
+            setLoad(false); 
+        });
+    }, [id]);
+    
 
     return(
         <div>
-            <ItemDetail item={item}/>
+            {load ? <Spinner/> : <ItemDetail item={item}/>}
         </div>
     )
 }

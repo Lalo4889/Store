@@ -23,3 +23,29 @@
 .logo{
   border-radius: 10%;
 }
+
+
+/* cardwigted  */
+
+.contador{
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.carrito{
+  display: flex;
+  position: fixed;
+  right: .5rem;
+  background-color:rgb(174, 157, 139);;
+  padding:.5rem;
+  border-radius: 10px;
+}
+
+/* error */
+
+.error{
+  margin: 10rem;
+}
+
+
