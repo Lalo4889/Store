@@ -12,7 +12,8 @@ const ItemDetail =({item})=>{
 
       addItem({ id: item.id, price: item.price, title: item.title, img: item.img }, count)
   };
-  
+
+ 
     return(
         <div className="presentacion">
           <div>
