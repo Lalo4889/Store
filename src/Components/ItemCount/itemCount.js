@@ -5,17 +5,12 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     const [count, setCount] = useState(initial);
    
     const incrementar = () => {
-      console.log("hola")
-      console.log(count)
-      console.log(stock)
       if(count < stock){
-        console.log("count:"+count)
         setCount(count + 1)
       }
     }
     const decrementar = () => {
       if(count > initial){
-        console.log("initial:"+initial)
         setCount(count - 1)
       }
     }

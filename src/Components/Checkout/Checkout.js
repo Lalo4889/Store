@@ -48,15 +48,15 @@ const Checkout = () => {
                 <form className="col" onSubmit={handleSubmit}>
                     <div className="col mt-4">
                         <label>Nombre</label>
-                        <input value={Nombre} name="Nombre" onChange={handleInputChange} type="text" pattern="^[^0-9]+$" placeholder="Nombre" required className="form-control border-1 border-dark" />
+                        <input value={Nombre} name="Nombre" onChange={handleInputChange} type="text" pattern="^[^0-9]+$" minlength="3" placeholder="Nombre" required className="form-control border-1 border-dark" />
                     </div>
                     <div className="col mt-4">
                         <label>Telefono</label>
-                        <input value={Telefono} name="Telefono" onChange={handleInputChange} type="number" required className="form-control border-1 border-dark" />
+                        <input value={Telefono} name="Telefono" onChange={handleInputChange} type="number"  required min="3" className="form-control border-1 border-dark" />
                     </div>
                     <div className="col mt-4">
                         <label>Ciudad</label>
-                        <input value={Ciudad} name="Ciudad" onChange={handleInputChange} type="text" pattern="^[^0-9]+$" required className="form-control border-1 border-dark" />
+                        <input value={Ciudad} name="Ciudad" onChange={handleInputChange} type="text" pattern="^[^0-9]+$" minlength="3" required className="form-control border-1 border-dark" />
                     </div>
                     <div className="col mt-4">
                         <label>Correo Electrónico</label>

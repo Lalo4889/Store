@@ -24,7 +24,9 @@ const ItemDetailContainer=()=>{
         .catch(error => {
             setLoad(false); 
         });
+        
     }, [id]);
+    
     
 
     return(
